@@ -1,0 +1,91 @@
+<div class="form-container">
+  <h2>Actualizar Producto</h2>
+
+  <mat-form-field class="form-field">
+    <mat-label>Product</mat-label>
+    <mat-select [(ngModel)]="selectedProductId">
+      <mat-option *ngFor="let product of products" [value]="product.id">{{
+        product.title
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <form (ngSubmit)="updateProduct()" *ngIf="selectedProductId">
+    <mat-form-field class="form-field">
+      <input
+        matInput
+        [placeholder]="
+          'Title: ' +
+          (selectedProductId
+            ? getProductProperty(selectedProductId, 'title')
+            : '')
+        "
+        [(ngModel)]="updatedProduct.title"
+        name="title"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input
+        matInput
+        [placeholder]="
+          'Price: ' +
+          (selectedProductId
+            ? getProductProperty(selectedProductId, 'price')
+            : '')
+        "
+        [(ngModel)]="updatedProduct.price"
+        name="price"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input
+        matInput
+        [placeholder]="
+          'Description: ' +
+          (selectedProductId
+            ? getProductProperty(selectedProductId, 'description')
+            : '')
+        "
+        [(ngModel)]="updatedProduct.description"
+        name="description"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input
+        matInput
+        [placeholder]="
+          'Image URL: ' +
+          (selectedProductId
+            ? getProductProperty(selectedProductId, 'image')
+            : '')
+        "
+        [(ngModel)]="updatedProduct.image"
+        name="image"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input
+        matInput
+        [placeholder]="
+          'Category: ' +
+          (selectedProductId
+            ? getProductProperty(selectedProductId, 'category')
+            : '')
+        "
+        [(ngModel)]="updatedProduct.category"
+        name="category"
+        required
+      />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Actualizar</button>
+  </form>
+</div>

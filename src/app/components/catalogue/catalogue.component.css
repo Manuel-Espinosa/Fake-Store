@@ -1,0 +1,28 @@
+.main-container{
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.container{
+    margin-top: 15px;
+    padding-left: 20px;
+    border-style:solid;
+    border-width:thin;
+    border-radius: 29px 29px 29px 29px;
+-webkit-border-radius: 29px 29px 29px 29px;
+-moz-border-radius: 29px 29px 29px 29px;
+    box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.87);
+-webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.87);
+-moz-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.87);
+}
+
+.more-button {
+    float: right; 
+  }
+  
+  .mat-menu-panel {
+    left: auto !important; 
+    right: 0; 
+  }
+  

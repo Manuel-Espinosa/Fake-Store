@@ -1,0 +1,32 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{ card.product.title }}
+     
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <img [src]="card.product.image" alt="Product Image" class="card-image" />
+          <div class="card-details">
+            <div>
+              <strong>ID:</strong> {{ card.product.id }}
+            </div>
+            <div>
+              <strong>Price:</strong> {{ card.product.price }}
+            </div>
+            <div>
+              <strong>Category:</strong> {{ card.product.category }}
+            </div>
+            <div>
+              <strong>Description:</strong> {{ card.product.description }}
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,0 +1,40 @@
+<form [formGroup]="productForm" (ngSubmit)="addProduct()" class="form-container">
+  <h2>Agregar Producto</h2>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Title" formControlName="title" required>
+      <mat-error *ngIf="productForm.get('title')?.invalid && productForm.get('title')?.touched">
+        Title is required.
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Price" formControlName="price" required>
+      <mat-error *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+        Price is required.
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Description" formControlName="description" required>
+      <mat-error *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+        Description is required.
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Image URL" formControlName="image" required>
+      <mat-error *ngIf="productForm.get('image')?.invalid && productForm.get('image')?.touched">
+        Image URL is required.
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Category" formControlName="category" required>
+      <mat-error *ngIf="productForm.get('category')?.invalid && productForm.get('category')?.touched">
+        Category is required.
+      </mat-error>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">Agregar</button>
+  </form>
+  

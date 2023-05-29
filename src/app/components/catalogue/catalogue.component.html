@@ -1,0 +1,16 @@
+<div class="main-container">
+  <div class="container" *ngFor="let product of products">
+    <div class="product-item">
+      <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item (click)="redirectToUpdate(product.id)">Actualizar</button>
+        <button mat-menu-item (click)="removeProduct(product)">Remover</button>
+      </mat-menu>
+
+      <!-- Display your product details here -->
+      <app-product [product]="product"></app-product>
+    </div>
+  </div>
+</div>

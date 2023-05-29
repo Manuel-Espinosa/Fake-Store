@@ -1,0 +1,15 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 33.33%;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+  }
+    
+    .form-field {
+      width: 100%;
+    }
+    
